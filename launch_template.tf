@@ -11,9 +11,9 @@ data "aws_ami" "amazon_linux" {
 
 resource "aws_launch_template" "web_template" {
 
-  name_prefix   = "web-template-"
+  name_prefix = "web-template-"
 
-  image_id      = data.aws_ami.amazon_linux.id
+  image_id = data.aws_ami.amazon_linux.id
 
   instance_type = "t3.micro"
 
